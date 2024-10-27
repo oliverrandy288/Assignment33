@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Enhancements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .enhanced-header {
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .background-fade {
+            background-color: rgba(0, 123, 255, 0.5); /* Blue with 50% opacity */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .interactive-button {
+            background-color: rgba(0, 255, 0, 0.8); /* Green with 80% opacity */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .interactive-button:hover {
+            background-color: rgba(255, 0, 0, 0.8); /* Red on hover */
+        }
+
+        .transition-link {
+            color: blue;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .transition-link:hover {
+            color: rgba(0, 123, 255, 0.7); /* Change to a softer blue on hover */
+        }
+
+        .rotating-icon {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .rotating-icon img {
+            width: 100px; /* Adjust the size as needed */
+            animation: rotation 2s infinite linear; /* Continuous rotation animation */
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="enhanced-header">Welcome to My Web Page</h1>
+    </header>
+
+    <div class="background-fade">
+        <p>This is a semi-transparent background. You can see the background through it!</p>
+    </div>
+
+    <button class="interactive-button">Hover Me!</button>
+
+    <a href="#" class="transition-link">Click Here</a>
+
+    <div class="rotating-icon">
+        <img src="https://via.placeholder.com/100" alt="Rotating Icon" />
+    </div>
+
+    <script>
+        document.querySelector('.interactive-button').addEventListener('click', function() {
+            this.style.transform = 'scale(1.1)'; // Slightly enlarge the button
+            setTimeout(() => {
+                this.style.transform = 'scale(1)'; // Return to original size
+            }, 150);
+        });
+    </script>
+</body>
+</html>
